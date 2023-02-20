@@ -17,7 +17,7 @@ app.use(cors())
 app.use(morgan("dev"))
 
 const port = process.env.PORT || 5001
-
+console.log(process.env.MONGO_URL)
 // MongooseDb
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_URL).then(()=>{
