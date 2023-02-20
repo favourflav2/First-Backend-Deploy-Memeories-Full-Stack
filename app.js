@@ -27,6 +27,9 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 }).catch((e)=>{
     console.log(e.message)
 })
+app.get('/',(req,res)=>{
+    res.send("hello")
+})
 
 // Routes
 app.use('/auth',UserRoutes)
